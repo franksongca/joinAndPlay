@@ -1,0 +1,33 @@
+<ion-view view-title="{{'FIELDS_LIST' | translate}}">
+  <ion-content class="padding">
+    <div class="list card" ng-repeat="field in fields">
+      <div class="item item-divider">{{::field.name}}</div>
+      <div class="item item-body">
+        <table border="1">
+          <tr>
+            <td class="field-title">{{'ADDRESS' | translate}}</td>
+            <td>&nbsp;{{::field.address}}</td>
+          </tr>
+          <tr>
+            <td class="field-title">{{'DISTANCE' | translate}}</td>
+            <td>&nbsp;{{::field.distance}}</td>
+          </tr>
+          <tr>
+            <td class="field-title">{{'REGISTERED_PLAYERS' | translate}}</td>
+            <td>&nbsp;{{::field.preRegisteredPlayers}}</td>
+          </tr>
+          <tr>
+            <td class="field-title">{{'ARRIVED_PLAYERS' | translate}}</td>
+            <td>&nbsp;{{::field.currentPlayers}}</td>
+          </tr>
+        </table>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
