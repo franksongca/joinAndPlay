@@ -1,11 +1,5 @@
 angular.module('joinAndPlay.controllers', [])
 
-.controller('HomeCtrl', function($scope, FieldsData) {
-  FieldsData.getFields().then(function (response) {
-    $scope.fields = response.data;
-  });
-})
-
 .controller('FieldCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, ChatsData) {

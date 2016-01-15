@@ -1,6 +1,19 @@
 <ion-view view-title="{{'FIELDS_LIST' | translate}}">
   <ion-content class="padding">
-    <div class="list card" ng-repeat="field in fields">
+
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label" translate="DISTANCE_RANGE">
+        </div>
+        <select ng-options="translate(distance.key) for distance in distances" ng-model="item" ng-change="onSelect(item.distance)">
+          <option style="display:none" value="">{{'LABEL_RANGE' | translate}}</option>
+        </select>
+      </label>
+
+    </div>
+
+    <div class="list card" ng-repeat="field in fields" ng-if="field.distance <= selectDistance || selectDistance === -1">
       <div class="item item-divider">{{::field.name}}</div>
       <div class="item item-body">
         <table border="1">
